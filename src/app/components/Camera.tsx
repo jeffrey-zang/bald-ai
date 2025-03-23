@@ -64,7 +64,7 @@ export default function Camera() {
       const data = await response.json();
       setResult(data.result);
     } catch (err) {
-      setError("Failed to analyze image. Please try again.");
+      setError("Failed to analyze image. Please try again. Error: " + err);
     } finally {
       setAnalyzing(false);
     }
